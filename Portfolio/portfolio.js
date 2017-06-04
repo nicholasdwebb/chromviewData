@@ -4,27 +4,17 @@ var ipH = iphone.height();
 var ww = window.innerWidth;
 var scaled;
 var resume = getVariable("resume");
-// var originalOffset;
-// var orginalHeight;
 $(function(){
 	$("#spacer").height(1.2*$("#nb").height());
 	var pic = $("#pic");
 	if(resume == "t"){
 		$("#resume").attr("href","t/Resume.pdf");
 	}
-	// pic.css("top",0.9*$("#nb").height());
-	// pic.height(pic.width());
 	waDemo();
-	// setTimeout(function(){
-	// 	originalOffset = parseInt($("#aboutme").css("top"),10);
-	// 	originalHeight = parseInt($("#aboutme").height());
-	// },500);
 	setInterval(function(){
 		if(iphone.height() !== ipH | window.innerWidth !== ww){
 			waDemo();
 			ww = window.innerWidth;
-			// pic.css("top",0.9*$("#nb").height());
-			// pic.height(pic.width());
 		}
 	}, 200);
 	console.log("Hello! Thanks for checking out my website. I am self taught, so some of the code might be a little unorthodox. If you have any suggestions on how I could improve it, I'd welcome the opportunity to hear from someone with more experience.");
@@ -40,8 +30,6 @@ function waDemo(){
 	screen.height((16/9)*screen.width());
 	var temp = (iphone.height() + iphone.offset().top - $("#widgetassistant").offset().top)*1.03;
 	$("#widgetassistant").height(temp);
-	// var temp = ipH + 2.1*parseInt(iphone.css("top"), 10);
-	// $("#widgetassistant").height(temp);
 	if (screen.height() !== h){
 		$("#iphonehomescreen").attr("src","Widget Assistant/Widget.html");
 	}
@@ -64,15 +52,6 @@ function waDemo(){
 		lh = 1.2;
 		$("#music").css("margin-top",0);
 	}
-	// if(window.innerWidth <= 768){
-	// 	var aboutOffset = parseInt($("#aboutme").css("top"),10) - $("#pic img").height()/1.8;
-	// 	var heightShift = parseInt($("#aboutme").css("top"),10) - $("#pic img").height();
-	// 	$("#aboutme").css("top", aboutOffset);
-	// 	$("#pic").height($("#aboutme").height() - heightShift);
-	// } else {
-	// 	$("#aboutme").css("top", originalOffset);
-	// 	$("#pic").height(originalHeight);
-	// }
 	if(fs < 12){
 		fs = 12;
 	}
@@ -98,8 +77,7 @@ function waDemo(){
 		back.height(back.width()*3/4);
 	}
 }
-function getVariable(variable)
-{
+function getVariable(variable){
        var query = window.location.search.substring(1);
        var vars = query.split("&");
        for (var i=0;i<vars.length;i++) {
