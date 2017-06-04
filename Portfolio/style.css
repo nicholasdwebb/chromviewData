@@ -7,6 +7,9 @@ body{
 	/*background-size: 1280px;*/
 	/*background-attachment:fixed;*/*/
 }
+.dropdown-backdrop {
+    position: static;
+}
 #background{
 	height:100%;
 	z-index:-500;
