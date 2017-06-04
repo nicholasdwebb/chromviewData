@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+
+	<dict>
+		<key>default</key>
+		<false/>
+		<key>label</key>
+		<string>View the tutorial</string>
+		<key>name</key>
+		<string>tutorial</string>
+		<key>type</key>
+		<string>switch</string>
+	</dict>
+
+	<dict>
+		<key>default</key>
+		<string>Orb</string>
+		<key>label</key>
+		<string>Assistant Style</string>
+		<key>name</key>
+		<string>assistanttype</string>
+		<key>options</key>
+		<dict>
+			<key>Orb</key>
+			<string>orb</string>
+			<key>HAL 9000 (ignores Assistant Color)</key>
+			<string>Hal</string>
+			<key>Circles</key>
+			<string>circles</string>
+			<key>Boxy Circles</key>
+			<string>boxy-circles</string>
+			<key>Spinning-Box</key>
+			<string>spinning-box</string>
+		</dict>
+		<key>type</key>
+		<string>select</string>
+	</dict>
+
+	<dict>
+		<key>default</key>
+		<string>White</string>
+		<key>label</key>
+		<string>Assistant Color (accepts codes)</string>
+		<key>name</key>
+		<string>assistantcolor</string>
+		<key>type</key>
+		<string>edit</string>
+	</dict>
+
+	<dict>
+		<key>default</key>
+		<string>Stardock</string>
+		<key>label</key>
+		<string>Weather icons</string>
+		<key>name</key>
+		<string>icons</string>
+		<key>options</key>
+		<dict>
+			<key>Black</key>
+			<string>Flat Black by LavAna</string>
+			<key>Blue</key>
+			<string>Flat Nano by LavAna</string>
+			<key>Stardock</key>
+			<string>stardock</string>
+			<key>White</key>
+			<string>Flat White by LavAna</string>
+			<key>flat colorful</key>
+			<string>HTC1</string>
+		</dict>
+		<key>type</key>
+		<string>select</string>
+	</dict>
+
+	<dict>
+		<key>default</key>
+		<true/>
+		<key>label</key>
+		<string>GPS (overrides City Name)</string>
+		<key>name</key>
+		<string>gps</string>
+		<key>type</key>
+		<string>switch</string>
+	</dict>
+
+	<dict>
+		<key>default</key>
+		<string>Paris, France</string>
+		<key>label</key>
+		<string>City Name</string>
+		<key>name</key>
+		<string>city</string>
+		<key>type</key>
+		<string>edit</string>
+	</dict>
+
+	<dict>
+		<key>default</key>
+		<string>5</string>
+		<key>label</key>
+		<string>Number of days in forecast</string>
+		<key>name</key>
+		<string>forecastdays</string>
+		<key>type</key>
+		<string>edit</string>
+	</dict>
+
+	<dict>
+		<key>default</key>
+		<string>English</string>
+		<key>label</key>
+		<string>Language</string>
+		<key>name</key>
+		<string>lang</string>
+		<key>options</key>
+		<dict>
+			<key>German</key>
+			<string>de</string>
+			<key>English</key>
+			<string>en</string>
+			<key>French</key>
+			<string>fr</string>
+			<key>Italian</key>
+			<string>it</string>
+			<key>Japanese</key>
+			<string>ja</string>
+			<key>Spanish</key>
+			<string>sp</string>
+			<key>Portuguese</key>
+			<string>pt</string>
+		</dict>
+		<key>type</key>
+		<string>select</string>
+	</dict>
+
+	<dict>
+		<key>default</key>
+		<string>White</string>
+		<key>label</key>
+		<string>Text Color</string>
+		<key>name</key>
+		<string>textColor</string>
+		<key>type</key>
+		<string>edit</string>
+	</dict>
+
+	<dict>
+		<key>default</key>
+		<string>18</string>
+		<key>label</key>
+		<string>Font Size</string>
+		<key>name</key>
+		<string>fontSize</string>
+		<key>type</key>
+		<string>edit</string>
+	</dict>
+
+	<dict>
+		<key>default</key>
+		<true/>
+		<key>label</key>
+		<string>Text Shadows</string>
+		<key>name</key>
+		<string>textShadows</string>
+		<key>type</key>
+		<string>switch</string>
+	</dict>
+
+	<dict>
+		<key>default</key>
+		<string>Black</string>
+		<key>label</key>
+		<string>Background Color</string>
+		<key>name</key>
+		<string>backgroundcolor</string>
+		<key>type</key>
+		<string>edit</string>
+	</dict>
+
+	<dict>
+		<key>default</key>
+		<true/>
+		<key>label</key>
+		<string>Blur background</string>
+		<key>name</key>
+		<string>blur</string>
+		<key>type</key>
+		<string>switch</string>
+	</dict>
+
+	<dict>
+		<key>default</key>
+		<string>10</string>
+		<key>label</key>
+		<string>Blur strength</string>
+		<key>name</key>
+		<string>blurradius</string>
+		<key>type</key>
+		<string>edit</string>
+	</dict>
+
+	<dict>
+		<key>default</key>
+		<string>300</string>
+		<key>label</key>
+		<string>How far down?</string>
+		<key>name</key>
+		<string>topplacement</string>
+		<key>type</key>
+		<string>edit</string>
+	</dict>
+
+	<dict>
+		<key>default</key>
+		<string>0</string>
+		<key>label</key>
+		<string>How far left? (iPad only)</string>
+		<key>name</key>
+		<string>leftplacement</string>
+		<key>type</key>
+		<string>edit</string>
+	</dict>
+
+	<dict>
+		<key>default</key>
+		<string>15</string>
+		<key>label</key>
+		<string>Weather/Calendar Updates (minutes)</string>
+		<key>name</key>
+		<string>updateInterval</string>
+		<key>type</key>
+		<string>edit</string>
+	</dict>
+
+<!-- 	<dict>
+		<key>default</key>
+		<string>30</string>
+		<key>label</key>
+		<string>Notification Updates (seconds)</string>
+		<key>name</key>
+		<string>notupdate</string>
+		<key>type</key>
+		<string>edit</string>
+	</dict> -->
+
+	<dict>
+		<key>default</key>
+		<string>10</string>
+		<key>label</key>
+		<string>Rotation Interval (seconds)</string>
+		<key>name</key>
+		<string>rotationInterval</string>
+		<key>type</key>
+		<string>edit</string>
+	</dict>
+
+	<dict>
+		<key>default</key>
+		<string>F</string>
+		<key>label</key>
+		<string>Temperature Units</string>
+		<key>name</key>
+		<string>tempunit</string>
+		<key>options</key>
+		<dict>
+			<key>F</key>
+			<string>f</string>
+			<key>C</key>
+			<string>c</string>
+		</dict>
+		<key>type</key>
+		<string>select</string>
+	</dict>
+
+	<dict>
+		<key>default</key>
+		<true/>
+		<key>label</key>
+		<string>12 hour clock</string>
+		<key>name</key>
+		<string>twelvehr</string>
+		<key>type</key>
+		<string>switch</string>
+	</dict>
+
+
+</array>
+</plist>

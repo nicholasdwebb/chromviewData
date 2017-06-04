@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Widget Assistant</title>
+	<script type="text/javascript" src="jquery-3.1.0.min.js"></script>
+	<script type="text/javascript" src="jquery-ui.min.js"></script>
+	<script type="text/javascript" src="config.js"></script>
+	<script type="text/javascript" src="translations.js"></script>
+<!-- 	<script type="text/cycript" src="infostats.js"></script> -->
+	<script type="text/javascript" src="jquery.simpleWeather.min.js"></script>
+	<script type="text/javascript" src="widgetDemo.js"></script>
+	<link rel="stylesheet" type="text/css" href="fontawesome/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="widgetDemo.css">
+</head>
+<body>
+
+<img id="backgroundimg" src="../Backgroundimg.jpg">
+<div id="everything">
+<div>
+<div id="assistant">
+
+	<div id="circles">
+		<div id="circle1" class="circles"></div>
+		<div id="circle2" class="circles"></div>
+		<div id="circle3" class="circles"></div>
+		<div id="circle4" class="circles"></div>
+		<div id="circle5" class="circles"></div>
+	</div>
+
+	<div id="boxy-circles">
+		<div class="sk-cube-grid">
+		  <div class="sk-cube sk-cube1"></div>
+		  <div class="sk-cube sk-cube2"></div>
+		  <div class="sk-cube sk-cube3"></div>
+		  <div class="sk-cube sk-cube4"></div>
+		  <div class="sk-cube sk-cube5"></div>
+		  <div class="sk-cube sk-cube6"></div>
+		  <div class="sk-cube sk-cube7"></div>
+		  <div class="sk-cube sk-cube8"></div>
+		  <div class="sk-cube sk-cube9"></div>
+		</div>
+	</div>
+
+	<div id="spinning-box">
+		<div class="spinner"></div>
+	</div>
+
+	<div id="orb" class="container">
+    	<div class="orb"></div>
+    	<div class="orb1"></div>
+    </div>
+
+    <div id="Hal">
+    	<div id="hal1">
+    		<div id="hal2"></div>
+    		<div id="hal3"></div>
+    		<div id="hal4"></div>
+    		<div id="hal5"><div id="hal5inner"></div></div>
+    	</div>
+    </div>
+</div>
+
+<div id="panelicons">
+	<div class="background" id="assistantbackground"></div>
+	<img class="blur" id="assistantblur">
+	<div id="iconstrip">
+		<i id="w-icon" class="fa fa-cloud" aria-hidden="true"></i>
+		<i id="d-icon" class="fa fa-mobile" aria-hidden="true"></i>
+		<i id="n-icon" class="fa fa-bell-o" aria-hidden="true"></i>
+	</div>
+
+</div>
+
+<div id="weatherpanel">
+	<div class="background" id="weatherpanelback"></div>
+	<img class="blur" id="weatherpanelblur">
+<!--<div id="weatherpaneldivider"></div> -->
+<!--Decided to remove this divider, uncomment if you wish to have it back. Necessary JS is not implemented for color matching-->
+	<div id="weatherspeech"></div>
+	<div id="temp"></div>
+	<div id="city"></div>
+	<img id="weathericon">
+	<table id="forecast">
+		<tr id="forecastdays"></tr>
+		<tr id="forecasticons"></tr>
+		<tr id="forecasthilo"></tr>
+	</table>
+</div>
+	
+<div id="datepanel">
+	<div class="background" id="datepanelback"></div>
+	<img class="blur" id="datepanelblur">
+	<div id="timewrap"><div id="time"><span>12:00</span></div></div>
+	<div id="batwrap"><div id="bat">25%</div></div>
+	<div id="batfill"></div>
+	<div id="ramwrap"><div id="ram">50%</div></div>
+	<div id="ramfill"></div>
+	<div id="labels">
+		<i id="clockicon" class="fa fa-clock-o" aria-hidden="true"></i>
+		<i id="batteryicon" aria-hidden="true"></i>
+		<i id="ramicon" class="fa fa-tasks" aria-hidden="true"></i><span id="ramtext">ram</span>
+	</div>
+	<div id="calendar">
+		<div id="date">Jan 1, 1970</div>
+		<p id="event" class="events"></p>
+	</div>
+</div>
+
+<div id="notificationspanel">
+	<div class="background" id="npanelback"></div>
+	<img class="blur" id="npanelblur">
+	<div id="mail"><i class="fa fa-envelope-o" aria-hidden="true"></i><span id="mnot"></span></div>
+  	<div id="phone"><i class="fa fa-phone" aria-hidden="true"></i><span id="pnot"></span></div>
+  	<div id="sms"><i class="fa fa-comments-o" aria-hidden="true"></i><span id="smsnot"></span></div>
+  	<div id="col1border"></div>
+  	<div id="fbook"><i class="fa fa-facebook-official" aria-hidden="true"></i><span id="fnot"></span></div>
+  	<div id="twit"><i class="fa fa-twitter-square" aria-hidden="true"></i><span id="tnot"></span></div>
+  	<div id="insta"><i class="fa fa-instagram" aria-hidden="true"></i></i><span id="inot"></span></div>
+</div>
+</div>
+</div>
+
+</body>
+</html>

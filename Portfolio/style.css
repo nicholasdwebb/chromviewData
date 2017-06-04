@@ -1,0 +1,158 @@
+body{
+	/*width:100%;*/
+	font-family: 'Roboto', sans-serif;
+	/*font-size:16px;*/
+	background: url("backgroundimg.jpg");
+	background-repeat: no-repeat;
+	/*background-size: 100%;*/
+	background-attachment:fixed;
+}
+.row.match-my-cols {
+    overflow: hidden; 
+}
+.row.match-my-cols [class*="col-"]{
+    margin-bottom: -99999px;
+    padding-bottom: 99999px;
+}
+.txt{
+	text-align: justify;
+    color:rgba(26,26,26,0.8);
+}
+.btn-default{
+	color:rgba(26,26,26,0.8);
+	border-color:rgba(26,26,26,0.8);
+	background-color:rgba(245,245,245,0);
+}
+.back{
+	background-color:rgba(245,245,245,0.90);
+	overflow:hidden;
+}
+.container .row div{
+	/*overflow:hidden;*/
+}
+#spacer {
+	height:20px;
+	width:100%;
+}
+#pic {
+	/*top:20px;*/
+}
+#pic div img{
+/*	position:relative;
+	top:20%;
+	left:10%;*/
+	margin:20px 0px 0px 0px;
+	width:100%;
+	border:2px solid #222;
+	border-radius: 50%;
+	display: inline-block;
+}
+/*#nb{
+	border-color:rgba(245,245,245,0.90);
+	background-color:white;
+	color:rgba(26,26,26,0.8);
+}*/
+h2{
+	text-align:right;
+}
+#pic h2{
+/*	text-align:right;*/
+	display:inline-block;
+	/*position:absolute;*/
+	/*bottom:-5%;*/
+	/*right:2%;*/
+}
+hr {
+	/*padding-top:5%;*/
+	border-top: 0.7px solid #222;
+	opacity:0.8;
+}
+#researchpics img{
+	width:100%;
+	border: 0.7px solid #222;
+	margin-bottom:10px;
+}
+#researchpics img:nth-child(2){
+	margin-bottom:20px;
+}
+#widgetassistant{
+	/*position:relative;*/
+	/*width:80%;*/
+	/*height:500px;*/
+	/*left:10%;*/
+	/*top:20px;*/
+	/*border-radius: 15px;*/
+	/*padding: 20px 20px;*/
+	padding-bottom: 7%;
+}
+#watext{
+	/*position:absolute;*/
+	width:50%;
+	/*height:86%;*/
+	/*top:7%;*/
+	/*margin-bottom: 20px;*/
+	/*left:20px;*/
+	/*color:white;*/
+}
+#buttonpanel{
+	position:absolute;
+	height: 20px;
+	bottom:7%;
+	/*left:0px;*/
+	/*margin-bottom:0px;*/
+	/*padding-right:7%;*/
+	/*left:20px;*/
+}
+#widgetassistantdemo{
+/*	position:absolute;*/
+	/*top:;*/
+	/*margin-top:7%;*/
+	margin-bottom:7%;
+	/*right:-20px;*/
+	/*width:300px;*/
+}
+#iphone {
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:100%;
+	z-index:2;
+}
+#iphonehomescreen {
+	border-width:0px;
+	position:absolute;
+	width:90%;
+	top:40%;
+	left:5%;
+	background-color:black;
+	z-index:1;
+}
+#fulldemo{
+	position:absolute;
+	z-index:3;
+	color:white;
+	border:0px solid black;
+	border-radius:0;
+	padding:0;
+	margin:0;
+	color:transparent;
+	text-align: center;
+}
+#fulldemo:hover{
+	background-color:rgba(13,13,13,.4);
+	color:white;
+	text-decoration:none;
+
+}
+#credit .txt{
+	text-align:center;
+	margin:0 auto;
+	color:rgba(245,245,245,0.90);
+}
+#credit{
+	margin-top:80px;
+	margin-bottom:20px;
+}
+.row, #music{
+	margin-top:20px;
+}
