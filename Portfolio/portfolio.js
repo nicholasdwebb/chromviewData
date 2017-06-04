@@ -48,12 +48,12 @@ function waDemo(){
 	var fs = 16*(window.innerWidth/1170);
 	var lh = 1.3*(window.innerWidth/1170);
 	if(window.innerWidth <= 970 && window.innerWidth > 768){
-		fs = 14*(window.innerWidth/970);
-		lh = 1.1;
-		$(".txt").css("text-align","left");
-		$("#credit .txt").css("text-align","center");
-	} 
-	if(window.innerWidth <= 768){
+	// 	fs = 14*(window.innerWidth/970);
+	// 	lh = 1.1;
+	// 	$(".txt").css("text-align","left");
+	// 	$("#credit .txt").css("text-align","center");
+	// } 
+	// if(window.innerWidth <= 768){
 		$(".borr").html("below");
 		// var aboutOffset = parseInt($("#aboutme").css("top"),10) - $("#pic img").height()/1.8;
 		// var heightShift = parseInt($("#aboutme").css("top"),10) - $("#pic img").height();
