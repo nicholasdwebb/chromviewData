@@ -2,10 +2,16 @@ body{
 	/*width:100%;*/
 	font-family: 'Roboto', sans-serif;
 	/*font-size:16px;*/
-	background: url("backgroundimg.jpg");
+/*	background: url("backgroundimg.jpg");
 	background-repeat: no-repeat;
-	/*background-size: 100%;*/
-	background-attachment:fixed;
+	/*background-size: 1280px;*/
+	/*background-attachment:fixed;*/*/
+}
+#background{
+	height:100%;
+	z-index:-500;
+	position:fixed;
+	top:0;
 }
 .row.match-my-cols {
     overflow: hidden; 
