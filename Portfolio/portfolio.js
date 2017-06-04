@@ -9,7 +9,7 @@ $(function(){
 	$("#spacer").height(1.2*$("#nb").height());
 	var pic = $("#pic");
 	if(resume == "t"){
-		$("#resume").href = "t/Resume.pdf";
+		$("#resume").attr("href","t/Resume.pdf");
 	}
 	// pic.css("top",0.9*$("#nb").height());
 	// pic.height(pic.width());
