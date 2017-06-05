@@ -9,6 +9,14 @@ $(function(){
 	var pic = $("#pic");
 	if(resume == "t"){
 		$("#resume").attr("href","t/Resume.pdf");
+		var chem = $("#row2").html();
+		var dev = $("#row3").html();
+		$("#row2").html(dev);
+		$("#row3").html(chem);
+		var goal = "I primarily chose to get my degree in chemistry because I wanted a challenge. However, I also began working in IT and web development to support myself while I was getting my education, and have really enjoyed the experience. While my degree may be a bit unorthodox for this kind of position, I do have the necessary experience, skills, and passion for the work.";
+		$("#goal").html(goal);
+		var exp = "<p>I am a self-taught web and iOS developer, which is how I supported myself during my time at UNC. In the academic world, I have modelled complex molecular systems. Most notably, I was part of a team that created a model for disorder and anisotropy in third and fourth dimensional systems. Examples of my work can be seen below.</p><p>My education also included work in many different lab environments. I learned to use spectrophotometry, agarose gel electrophoresis, SDS-PAGE, NMR spectroscopy, GC-MS, PCR, and other means of analyzing organic and biochemical reactions. With these techniques and others, I was taught to carry out tasks such as planning or executing complex syntheses and making genetic modifications to bacteria.</p>";
+		$("#exp").html(exp);
 	}
 	waDemo();
 	setInterval(function(){
