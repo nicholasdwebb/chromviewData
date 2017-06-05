@@ -82,8 +82,8 @@ function waDemo(){
 	var back = $("#background");
 	back.height(window.innerHeight*1.2);
 	if(back.width() < window.innerWidth){
-		back.width(window.innerWidth);
-		back.height(back.width()*3/4);
+		back.height(window.innerHeight*1.2);
+		back.width(back.height()*4/3);
 	}
 }
 function getVariable(variable){
