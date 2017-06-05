@@ -59,6 +59,7 @@ function waDemo(){
 		fs = 23*(window.innerWidth/768);
 		lh = 1.2;
 		$("#music").css("margin-top",0);
+		$("#row1").removeClass("match-my-cols");
 	}
 	if(fs < 12){
 		fs = 12;
