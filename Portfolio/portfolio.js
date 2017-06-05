@@ -3,6 +3,7 @@ var iphone = $("#iphone");
 var ipH = iphone.height();
 var ww = window.innerWidth;
 var scaled;
+var switched;
 var resume = getVariable("resume");
 $(function(){
 	$("#spacer").height(1.2*$("#nb").height());
@@ -58,8 +59,21 @@ function waDemo(){
 		// $("#pic").height($("#aboutme").height() - heightShift);
 		fs = 23*(window.innerWidth/768);
 		lh = 1.2;
-		$("#music").css("margin-top",0);
+		// $("#musicalt").css("margin-top",10);
+		$("#musicalt").html($("#music").html());
+		$("#music").html("");
+		$("#music").removeClass("back col-lg-12 col-md-12 col-sm-12 col-xs-12");
+		$("#musicalt").addClass("back col-sm-12 col-xs-12");
 		$("#row1").removeClass("match-my-cols");
+		switched = true;
+	}
+	if(window.innerWidth > 970 && switched == true){
+		$("#music").html($("#musicalt").html());
+		$("#musicalt").html("");
+		$("#musicalt").removeClass("back col-sm-12 col-xs-12");
+		$("#music").addClass("back col-lg-12 col-md-12 col-sm-12 col-xs-12")
+		$("#row1").removeClass("match-my-cols");
+		switched = false;
 	}
 	if(fs < 12){
 		fs = 12;
