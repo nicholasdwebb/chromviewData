@@ -78,7 +78,7 @@ function waDemo(){
 			$("#music").html("");
 			$("#music").removeClass("back col-lg-12 col-md-12 col-sm-12 col-xs-12");
 			$("#musicalt").addClass("back col-sm-12 col-xs-12");
-			$("#row1").removeClass("match-my-cols");
+			$("#row1").addClass("match-my-cols");
 			switched = true;
 		},500);
 	}
