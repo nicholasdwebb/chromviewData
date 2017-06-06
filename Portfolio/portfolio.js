@@ -78,17 +78,18 @@ function waDemo(){
 			$("#music").html("");
 			$("#music").removeClass("back col-lg-12 col-md-12 col-sm-12 col-xs-12");
 			$("#musicalt").addClass("back col-sm-12 col-xs-12");
-			$("#row1").addClass("match-my-cols");
+			$("#row1").removeClass("match-my-cols");
 			switched = true;
 		},500);
 	}
 	setTimeout(function(){
 		if(window.innerWidth > 970 && switched == true){
+			$("#musicalt").css("margin-top",0);
 			$("#music").html(music);
 			$("#musicalt").html("");
 			$("#musicalt").removeClass("back col-sm-12 col-xs-12");
 			$("#music").addClass("back col-lg-12 col-md-12 col-sm-12 col-xs-12")
-			$("#row1").removeClass("match-my-cols");
+			$("#row1").addClass("match-my-cols");
 			switched = false;
 		}
 	},500);
