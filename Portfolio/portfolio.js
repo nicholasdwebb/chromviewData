@@ -76,8 +76,8 @@ function waDemo(){
 			$("#musicalt").css("margin-top",10);
 			$("#musicalt").html(music);
 			$("#music").html("");
-			$("#music").removeClass("back col-lg-12 col-md-12 col-sm-12 col-xs-12");
-			$("#musicalt").addClass("back col-sm-12 col-xs-12");
+			$("#music").removeClass("back col-lg-12 col-md-12 col-sm-12 col-xs-12 txt");
+			$("#musicalt").addClass("back col-sm-12 col-xs-12 txt");
 			$("#row1").removeClass("match-my-cols");
 			switched = true;
 		},500);
@@ -87,8 +87,8 @@ function waDemo(){
 			$("#musicalt").css("margin-top",0);
 			$("#music").html(music);
 			$("#musicalt").html("");
-			$("#musicalt").removeClass("back col-sm-12 col-xs-12");
-			$("#music").addClass("back col-lg-12 col-md-12 col-sm-12 col-xs-12")
+			$("#musicalt").removeClass("back col-sm-12 col-xs-12 txt");
+			$("#music").addClass("back col-lg-12 col-md-12 col-sm-12 col-xs-12 txt");
 			$("#row1").addClass("match-my-cols");
 			switched = false;
 		}
