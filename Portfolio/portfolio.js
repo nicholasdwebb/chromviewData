@@ -107,7 +107,7 @@ function waDemo(){
 			$("#widgetassistant").height(temp);
 			$("#widgetassistant").css("padding-bottom", 0);
 		}
-	},300);
+	},500);
 	$(".txt, .btn-default").css("font-size",fs);
 	$("h2").css("font-size", 1.6*fs);
 	$(".txt").css("line-height",lh);
