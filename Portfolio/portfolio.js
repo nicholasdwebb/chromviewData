@@ -4,11 +4,13 @@ var ipH = iphone.height();
 var ww = window.innerWidth;
 var scaled;
 var switched;
+var music;
 var resume = getVariable("resume");
 $(function(){
 	$("#spacer").height(1.2*$("#nb").height());
 	var pic = $("#pic");
 	if(resume == "t"){
+		music = $("#music").html();
 		$("#resume").attr("href","t/Resume.pdf");
 		var chem = $("#row2").html();
 		var dev = $("#row3").html();
@@ -35,6 +37,9 @@ $(function(){
 });
 function waDemo(){
 	$(".borr").html("to the right");
+	setTimeout(function(){
+		$("#iphonehomescreen").attr("src","Widget Assistant/Widget.html");
+	},700);
 	screen = $("#iphonehomescreen, #fulldemo");
 	iphone = $("#iphone");
 	var h = screen.height();
@@ -65,8 +70,11 @@ function waDemo(){
 		fs = 23*(window.innerWidth/768);
 		lh = 1.2;
 		setTimeout(function(){
+			if (music === undefined){
+				music = $("#music").html();
+			}
 			$("#musicalt").css("margin-top",10);
-			$("#musicalt").html($("#music").html());
+			$("#musicalt").html(music);
 			$("#music").html("");
 			$("#music").removeClass("back col-lg-12 col-md-12 col-sm-12 col-xs-12");
 			$("#musicalt").addClass("back col-sm-12 col-xs-12");
@@ -76,7 +84,7 @@ function waDemo(){
 	}
 	setTimeout(function(){
 		if(window.innerWidth > 970 && switched == true){
-			$("#music").html($("#musicalt").html());
+			$("#music").html(music);
 			$("#musicalt").html("");
 			$("#musicalt").removeClass("back col-sm-12 col-xs-12");
 			$("#music").addClass("back col-lg-12 col-md-12 col-sm-12 col-xs-12")
