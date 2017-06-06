@@ -101,7 +101,7 @@ function waDemo(){
 	}
 	$("#widgetassistant").css("padding-bottom", "7%");
 	setTimeout(function(){
-		var temp = ($("#watext").height() + $("#watext").offset().top - $("#widgetassistant").offset().top)*1.03;
+		var temp = ($("#watext").height() + $("#buttonpanel").height() + $("#watext").offset().top - $("#widgetassistant").offset().top)*1.03;
 		if(ipH*0.88 <= $("#watext").height() && scaled !== temp){
 			scaled = temp;
 			$("#widgetassistant").height(temp);
