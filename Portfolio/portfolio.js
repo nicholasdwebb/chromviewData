@@ -28,7 +28,8 @@ $(function(){
 			waDemo();
 			ww = window.innerWidth;
 		} else if ($("#music" + mAlt + " .txt").css("font-size") !== $(".txt").css("font-size")){
-			$("#music" + mAlt + " .txt").css("font-size", $(".txt").css("font-size"));
+			$("#music" + mAlt + " h2").css("font-size",$("h2:first-of-type").css("font-size"))
+			$("#music" + mAlt + " .txt").css("font-size", $(".txt").css("font-size"));	
 		}
 	}, 500);
 	console.log("Hello! Thanks for checking out my website. I am self taught, so some of the code might be a little unorthodox. If you have any suggestions on how I could improve it, I'd welcome the opportunity to hear from someone with more experience.");
