@@ -27,7 +27,7 @@ $(function(){
 		if(iphone.height() !== ipH | window.innerWidth !== ww){
 			waDemo();
 			ww = window.innerWidth;
-		} else if ($("#music" + mAlt + " .txt").css("font-size") !== $(".txt").css("font-size")){
+		} else if ($("#music" + mAlt + " .txt").css("font-size") !== $(".txt").css("font-size") | $("#music" + mAlt + " h2").css("font-size") !== $("h2:first-of-type").css("font-size")){
 			$("#music" + mAlt + " h2").css("font-size",$("h2:first-of-type").css("font-size"))
 			$("#music" + mAlt + " .txt").css("font-size", $(".txt").css("font-size"));	
 		}
