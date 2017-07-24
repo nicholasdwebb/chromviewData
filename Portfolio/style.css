@@ -96,21 +96,15 @@ hr {
 }
 #watext{
 	/*position:absolute;*/
-	width:50%;
+	/*width:50%;*/
 	/*height:86%;*/
 	/*top:7%;*/
 	/*margin-bottom: 20px;*/
 	/*left:20px;*/
 	/*color:white;*/
 }
-/*#buttonpanel{
-	position:absolute;
-	height: 20px;
-	bottom:7%;
-	left:0px;
-	/*margin-bottom:0px;*/
-	/*padding-right:7%;*/
-	/*left:20px;*/
+#buttonpanel{
+	text-align: center;
 }*/
 #widgetassistantdemo{
 /*	position:absolute;*/
