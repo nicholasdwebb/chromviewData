@@ -93,7 +93,7 @@ function waDemo(){
 	}
 	setTimeout(function(){
 		var temp = ($("#watext").height() + $("#watext").offset().top - $("#widgetassistant").offset().top)*0.98;
-		if(ipH*0.88 <= $("#watext" && $("#widgetassistant").height() !== temp).height()){
+		if(ipH*0.88 <= $("#watext").height() && $("#widgetassistant").height() !== temp){
 			scaled = temp;
 			$("#widgetassistant").height(scaled);
 			$("#widgetassistant").css("padding-bottom", 0);
@@ -104,7 +104,7 @@ function waDemo(){
 		if(window.innerWidth < 768 && $("#widgetassistant").height() !== temp){
 			$("#below").html("below")
 			$("#widgetassistant").height(temp);
-		} else {
+		} else if (window.innerWidth >= 768) {
 			$("#below").html("to the right")
 		}
 	},500);
