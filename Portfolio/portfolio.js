@@ -100,7 +100,7 @@ function waDemo(){
 		} else {
 			$("#widgetassistant").css("padding-bottom", "7%");
 		}
-		temp = ($("#watext").height() + $("#widgetassistantdemo").height())*0.98;
+		temp = ($("#watext").height() + $("#iphone").height())*1.13;
 		if(window.innerWidth < 768 && $("#widgetassistant").height() !== temp){
 			$("#below").html("below")
 			$("#widgetassistant").height(temp);
