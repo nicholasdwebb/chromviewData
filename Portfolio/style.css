@@ -12,6 +12,10 @@ body{
 .dropdown-backdrop {
     position: static;
 }
+#ref{
+	position:absolute;
+	top:0;
+}
 #background{
 	height:100%;
 	width:100%;
@@ -86,7 +90,7 @@ body{
 	background-color:white;
 	color:rgba(26,26,26,0.8);
 }*/
-h2{
+h2, h3{
 	text-align:right;
 }
 #pic h2{
@@ -100,6 +104,7 @@ hr {
 	/*padding-top:5%;*/
 	border-top: 0.7px solid #222;
 	opacity:0.8;
+	width: 100%;
 }
 #researchpics img{
 	width:100%;
@@ -182,7 +187,7 @@ hr {
 	margin-bottom:20px;
 }
 #workstatus{
-	/*margin-top: 20px;*/
+	margin-top: 20px;
 	padding-top: 10px;
 }
 .row, #music, #musicalt{

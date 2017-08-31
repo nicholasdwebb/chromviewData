@@ -38,9 +38,11 @@ $(function(){
 function waDemo(){
 	setTimeout(function(){
 		$("#iphonehomescreen").attr("src","Widget Assistant/Widget.html");
+		var t = $("#references").offset().top - 1.2*$("nav").height();
+		$("#ref").css("top", t);
 	},700);
 	$(".back").addClass("boxshadow");
-	$("#workstatus").css("margin-top",0);
+	$("#references").css("margin-top",0);
 	screen = $("#iphonehomescreen, #fulldemo");
 	iphone = $("#iphone");
 	// var h = screen.height();
@@ -58,7 +60,7 @@ function waDemo(){
 		fs = 23*(window.innerWidth/768);
 		lh = 1.2;
 		$(".back").removeClass("boxshadow");
-		$("#workstatus").css("margin-top","20px");
+		$("#references").css("margin-top","20px");
 		setTimeout(function(){
 			if (music === undefined){
 				music = $("#music").html();
