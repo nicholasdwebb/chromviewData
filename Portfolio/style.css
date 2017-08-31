@@ -181,6 +181,10 @@ hr {
 	margin-top:80px;
 	margin-bottom:20px;
 }
+#workstatus{
+	margin-top: 20px;
+	padding-top: 10px;
+}
 .row, #music{
 	margin-top:20px;
 }
