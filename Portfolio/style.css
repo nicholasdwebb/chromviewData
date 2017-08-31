@@ -178,12 +178,13 @@ hr {
 	color:rgba(245,245,245,0.90);
 }
 #credit{
-	margin-top:60px;
+	margin-top:80px;
 	margin-bottom:20px;
 }
 #workstatus{
+	margin-top: 20px;
 	padding-top: 10px;
 }
-.row, #music, #musicalt{
+.row, #music{
 	margin-top:20px;
 }
