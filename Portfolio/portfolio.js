@@ -115,6 +115,7 @@ function waDemo(){
 	},500);
 	$(".txt, .btn-default").css("font-size",fs);
 	$("h2").css("font-size", 1.6*fs);
+	$("h3").css("font-size", 1.3*fs);
 	$(".txt").css("line-height",lh);
 	var back = $("#background");
 	back.height(window.innerHeight*1.2);
