@@ -7,6 +7,7 @@ var switched;
 var music;
 var mAlt = "";
 var resume = getVariable("resume");
+
 $(function(){
 	$("#spacer").height(1.2*$("#nb").height());
 	var pic = $("#pic");
@@ -38,6 +39,7 @@ function waDemo(){
 	setTimeout(function(){
 		$("#iphonehomescreen").attr("src","Widget Assistant/Widget.html");
 	},700);
+	$(".back").addClass("boxshadow");
 	screen = $("#iphonehomescreen, #fulldemo");
 	iphone = $("#iphone");
 	// var h = screen.height();
@@ -54,6 +56,7 @@ function waDemo(){
 		$(".borr").html("below");
 		fs = 23*(window.innerWidth/768);
 		lh = 1.2;
+		$(".back").removeClass("boxshadow");
 		setTimeout(function(){
 			if (music === undefined){
 				music = $("#music").html();
@@ -113,11 +116,24 @@ function waDemo(){
 	$(".txt").css("line-height",lh);
 	var back = $("#background");
 	back.height(window.innerHeight*1.2);
-	if(back.width() < window.innerWidth){
-		back.width(window.innerWidth);
-		back.height(back.width()*3/4);
-	}
+	// if(back.width() < window.innerWidth){
+	// 	back.width(window.innerWidth);
+	// 	back.height(window.innerHeight);
+	// 	backgroundAnim()
+	// }
 }
+// var int;
+// function backgroundAnim(){
+// 	clearInterval(int);
+// 	function t(){
+// 		$("#background div").toggleClass("anim");
+// 	}
+// 	t();
+// 	var int = setInterval(function(){
+// 		t();
+// 	},10500);
+// }
+
 function getVariable(variable){
        var query = window.location.search.substring(1);
        var vars = query.split("&");
