@@ -40,6 +40,7 @@ function waDemo(){
 		$("#iphonehomescreen").attr("src","Widget Assistant/Widget.html");
 	},700);
 	$(".back").addClass("boxshadow");
+	$("#workstatus").css("margin-top",0);
 	screen = $("#iphonehomescreen, #fulldemo");
 	iphone = $("#iphone");
 	// var h = screen.height();
@@ -57,11 +58,11 @@ function waDemo(){
 		fs = 23*(window.innerWidth/768);
 		lh = 1.2;
 		$(".back").removeClass("boxshadow");
+		$("#workstatus").css("margin-top","20px");
 		setTimeout(function(){
 			if (music === undefined){
 				music = $("#music").html();
 			}
-			$("#musicalt").css("margin-top",10);
 			$("#musicalt").html(music);
 			$("#music").html("");
 			$("#music").removeClass("back col-lg-12 col-md-12 col-sm-12 col-xs-12 txt");
@@ -74,7 +75,6 @@ function waDemo(){
 		$(".borr").html("to the right");
 		setTimeout(function(){
 			if(switched == true){
-				$("#musicalt").css("margin-top",0);
 				$("#music").html(music);
 				$("#musicalt").html("");
 				$("#musicalt").removeClass("back col-sm-12 col-xs-12 txt");
