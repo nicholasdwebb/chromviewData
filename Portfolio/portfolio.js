@@ -5,6 +5,10 @@ var ww = window.innerWidth;
 var scaled;
 var switched;
 var music;
+var ref1orig;
+var ref2orig;
+var ref3orig;
+var ref4orig;
 var mAlt = "";
 var resume = getVariable("resume");
 
@@ -64,8 +68,15 @@ function waDemo(){
 		setTimeout(function(){
 			if (music === undefined){
 				music = $("#music").html();
+				ref1orig = $("#ref1").html();
+				ref2orig = $("#ref2").html();
+				ref3orig = $("#ref3").html();
+				ref4orig = $("#ref4").html();
 			}
 			$("#musicalt").html(music);
+			$("#ref4").html(ref2orig);
+			$("#ref2").html(ref3orig);
+			$("#ref3").html(ref4orig);
 			$("#music").html("");
 			$("#music").removeClass("back col-lg-12 col-md-12 col-sm-12 col-xs-12 txt");
 			$("#musicalt").addClass("back col-sm-12 col-xs-12 txt");
@@ -78,6 +89,10 @@ function waDemo(){
 		setTimeout(function(){
 			if(switched == true){
 				$("#music").html(music);
+				$("#ref1").html(ref1orig);
+				$("#ref2").html(ref2orig);
+				$("#ref3").html(ref3orig);
+				$("#ref4").html(ref4orig);
 				$("#musicalt").html("");
 				$("#musicalt").removeClass("back col-sm-12 col-xs-12 txt");
 				$("#music").addClass("back col-lg-12 col-md-12 col-sm-12 col-xs-12 txt");
