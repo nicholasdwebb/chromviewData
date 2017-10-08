@@ -73,7 +73,7 @@ h2{
 	border-left: 1px solid rgba(20,20,20,0.8);
 	padding: 10.5px 3px;
 	margin: 0 0;
-	font: 1em Helvetica;
+	font: 1.15em Helvetica;
 	box-sizing: border-box;
 	display: inline-block;
 	vertical-align: middle;
@@ -90,11 +90,17 @@ h2{
 	display:none;
 }
 
-.ui-dialog-title{
-	position: relative;
-	top: 7px;
+.ui-dialog-titlebar{
 	padding: 7px 5px;
+	border: 1px solid rgba(20,20,20,0.8);
+	border-bottom: none;
+	border-radius: 5px 5px 0 0;
+	box-sizing: border-box;
+	-webkit-box-shadow: 1px 5px 15px 0px rgba(0,0,0,0.3);
+    -moz-box-shadow: 1px 5px 15px 0px rgba(0,0,0,0.3);
+	box-shadow: 1px 5px 15px 0px rgba(0,0,0,0.3);
 }
+
 
 .ui-dialog{
 	position: absolute;
@@ -104,36 +110,48 @@ h2{
 
 .dialog{
 	text-align: center;
-	-webkit-box-shadow: 1px 2px 15px 0px rgba(0,0,0,0.3);
+	/*-webkit-box-shadow: 1px 2px 15px 0px rgba(0,0,0,0.3);
     -moz-box-shadow: 1px 2px 15px 0px rgba(0,0,0,0.3);
-	box-shadow: 1px 2px 15px 0px rgba(0,0,0,0.3);
-	border: 1px solid rgba(20,20,20,0.8);
+	box-shadow: 1px 2px 15px 0px rgba(0,0,0,0.3);*/
+	/*border: 1px solid rgba(20,20,20,0.8);*/
 	border-radius: 5px;
+	/*overflow: hidden;*/
 }
 
 #dialog.ui-dialog-content.ui-widget-content{
 	display: none;
 }
 
-.ui-dialog-buttonset{
-	padding-top: 15px;
-}
-
 .ui-dialog-buttonset button{
 	float: left;
 	padding: 7px 0;
-	box-sizing: border-box;
 	width: 100%;
 	box-sizing: border-box;
-	background-color: transparent;
-	border: none;
-	border-top: 1px solid rgba(20,20,20,0.8);
+	border: 1px solid rgba(20,20,20,0.8);
+	border-bottom: none;
+	-webkit-box-shadow: 1px 5px 15px 0px rgba(0,0,0,0.3);
+    -moz-box-shadow: 1px 5px 15px 0px rgba(0,0,0,0.3);
+	box-shadow: 1px 5px 15px 0px rgba(0,0,0,0.3);
+}
+
+.ui-dialog-buttonset button:nth-last-of-type(2){
+	border-radius: 0 0 5px 5px;
+	border-bottom: 1px solid rgba(20,20,20,0.8);
+	overflow: hidden;
+}
+
+.ui-dialog-buttonset button:last-of-type{
+	background-color: rgba(223,20,20,0.9);
+	border-bottom: 1px solid rgba(20,20,20,0.8);
+	color: rgba(224,224,224,0.95);
+	border-radius: 5px;
+	margin-top: 5px;
 }
 
 /*.ui-dialog-buttonset button:nth-of-type(even){
 	border-left: 1px solid rgba(20,20,20,0.8);
 }*/
 
-.replace:focus, .ui-dialog-buttonset button:focus{
+.replace:focus, .ui-dialog-buttonset button:focus, .ui-dialog{
 	outline:none;
 }

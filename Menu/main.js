@@ -123,6 +123,13 @@ $(function(){
 						close();
 					}
 				}
+			dialogs[foods.length+2] = {
+				text: "Reset the whole week",
+				click: function() {
+					reset();
+					close();
+				}
+			}
 			dialogs[foods.length+1] = {
 					text: "Never mind...",
 					click: function() {
@@ -136,13 +143,14 @@ $(function(){
 				w = 250;
 			}
 			$("#dialog").dialog({
-				dialogClass: "dialog background",
+				dialogClass: "dialog",
 				title: "What are you in the mood for?",
 				width: w,
 				buttons: dialogs
 			});
 			$("#dialog.ui-dialog-content.ui-widget-content").hide();
 			$("div.dialog").css("top", 30);
+			$(".ui-dialog-buttonset button, .ui-dialog-titlebar").addClass("background");
 			$("#container").animate({
 				opacity: 0.2,
 			}, 500);
