@@ -201,7 +201,7 @@ function verify(temp, i, specific){
 			var x = $(".day").eq(i);
 			var h = x.height();// - parseInt(x.css("border-top"));
 			$(".cal").eq(i).height(h);
-			$("#container button").eq(i).height(h);
+			$(".replace").eq(i).height(h);
 		} else {
 			generate(i);
 		}

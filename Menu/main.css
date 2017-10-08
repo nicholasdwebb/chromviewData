@@ -30,7 +30,7 @@ h2{
 	box-sizing: border-box;
 	border-radius: 5px;
 	overflow: hidden;
-	border: 1px solid rgba(20,20,20,0.8);
+	/*border: 1px solid rgba(20,20,20,0.8);*/
 	-webkit-box-shadow: 1px 2px 15px 0px rgba(0,0,0,0.3);
     -moz-box-shadow: 1px 2px 15px 0px rgba(0,0,0,0.3);
 	box-shadow: 1px 2px 15px 0px rgba(0,0,0,0.3);
@@ -41,10 +41,11 @@ h2{
 	margin: 10px 0;
 	border-radius: 5px;
 	overflow: hidden;
-	border: 1px solid rgba(20,20,20,0.8);
+	/*border: 1px solid rgba(20,20,20,0.8);*/
 	-webkit-box-shadow: 1px 2px 15px 0px rgba(0,0,0,0.3);
     -moz-box-shadow: 1px 2px 15px 0px rgba(0,0,0,0.3);
 	box-shadow: 1px 2px 15px 0px rgba(0,0,0,0.3);
+	/*box-sizing: border-box;*/
 }
 
 .day, .cal{
@@ -57,11 +58,15 @@ h2{
 	height: 100%;
 	margin: 0;
 	vertical-align: middle;
+	position: relative;
+	top: 0;
 }
 
 .cal{
 	width: 100px;
-	border-right: 1px solid rgba(20,20,20,0.8);
+	/*border-right: 1px solid rgba(20,20,20,0.8);*/
+	background-color: rgba(20,20,20,0.1);
+	padding-top: 11px
 }
 
 .replace{
@@ -70,7 +75,7 @@ h2{
 	color: rgba(224,224,224,0.95);
 	border: none;
 	/*border-top: 1px solid rgba(20,20,20,0.8);*/
-	border-left: 1px solid rgba(20,20,20,0.8);
+	/*border-left: 1px solid rgba(20,20,20,0.8);*/
 	padding: 10.5px 3px;
 	margin: 0 0;
 	font: 1.15em Helvetica;
@@ -92,7 +97,7 @@ h2{
 
 .ui-dialog-titlebar{
 	padding: 7px 5px;
-	border: 1px solid rgba(20,20,20,0.8);
+	/*border: 1px solid rgba(20,20,20,0.8);*/
 	border-bottom: none;
 	border-radius: 5px 5px 0 0;
 	box-sizing: border-box;
@@ -127,8 +132,8 @@ h2{
 	padding: 7px 0;
 	width: 100%;
 	box-sizing: border-box;
-	border: 1px solid rgba(20,20,20,0.8);
-	border-bottom: none;
+	border: none;
+	border-top: 1px solid rgba(20,20,20,0.8);
 	-webkit-box-shadow: 1px 5px 15px 0px rgba(0,0,0,0.3);
     -moz-box-shadow: 1px 5px 15px 0px rgba(0,0,0,0.3);
 	box-shadow: 1px 5px 15px 0px rgba(0,0,0,0.3);
@@ -138,13 +143,14 @@ h2{
 
 .ui-dialog-buttonset button:nth-last-of-type(2){
 	border-radius: 0 0 5px 5px;
-	border-bottom: 1px solid rgba(20,20,20,0.8);
+	/*border-bottom: 1px solid rgba(20,20,20,0.8);*/
 	overflow: hidden;
 }
 
 .ui-dialog-buttonset button:last-of-type{
 	background-color: rgba(223,20,20,0.9);
-	border-bottom: 1px solid rgba(20,20,20,0.8);
+	/*border-bottom: 1px solid rgba(20,20,20,0.8);*/
+	border-top: none;
 	color: rgba(224,224,224,0.95);
 	border-radius: 5px;
 	margin-top: 5px;
