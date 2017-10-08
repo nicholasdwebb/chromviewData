@@ -4,28 +4,41 @@ foodTypes["Mexican"] = {
 		"Burritos",
 		"Tostadas",
 		"Tacos",
-		"Mexican4",
-		"Mexican5",
+		"Fajitas",
+		"Enchiladas",
 	],
 	count: 1,
 };
 foodTypes["American"] = {
 	options: [
 		"Cheeseburgers",
-		"Chicken",
-		"Mac and Cheese",
-		"American4",
-		"American5",
+		"Chicken Caesar Salad",
+		"Crispy Chicken",
+		"Chicken Sandwiches",
+		"Lemon Chicken",
+		"Chicken Parmesan Sandwiches",
+		"Chicken Salad",
+		"Sloppy Joes",
+		"Sliders",
+		"Turkey Melts",
+		"Pork Chops",
 	],
 	count: 3,
 };
-foodTypes["Italian"] = {
+foodTypes["Pasta"] = {
 	options: [
 		"Spaghetti",
 		"Ziti",
-		"Italian3",
-		"Italian4",
-		"Italian5",
+		"Lasagna",
+		"Carbonara",
+		"Pizza Pasta",
+		"Fettuccine",
+		"Sausage and Pepper Pasta",
+		"Stuffed Shells",
+		"Ravioli",
+		"Tortellini",
+		"Tuna Helper",
+		"Angel Hair with Tomatoes",
 	],
 	count: 1,
 };
@@ -34,16 +47,26 @@ foodTypes["Crockpot"] = {
 		"Minestrone",
 		"Pulled Pork",
 		"Chicken Tortilla Soup",
-		"Crockpot4",
-		"Crockpot5",
+		"Chili",
+		"Potato Soup",
+		"Ham and Beans",
+		"Chicken and Dumplings",
+		"Slow Cooked Ham",
+		"Chicken Noodle Soup",
+		"Hawaiin Chicken",
+		"Gumbo",
 	],
 	count: 1,
 };
 foodTypes["Miscellaneous"] = {
 	options: [
-		"Misc1",
-		"Misc2",
-		"Misc3",
+		"Breakfast Burritos",
+		"Fish",
+		"Quiche Cups",
+		"Flatbread Pizza",
+		"Order Takeout",
+		"Fried Rice",
+		"Subs",
 	],
 	count: 2,
 };
@@ -52,13 +75,20 @@ var entry;
 var foods = [];
 var dialogs = [];
 var initialized = false;
+var counts = [];
 
 $(function(){
 
 	if(window.innerWidth < 420){
 		$("#container").width(window.innerWidth * .95);
 	}
-	
+
+	var i = 0
+	Object.keys(foodTypes).forEach(function(key){
+		counts[i] = foodTypes[key].count;
+		i++
+	});
+
 	genFoods();
 
 	entry = document.querySelectorAll(".day");
@@ -160,6 +190,10 @@ function verify(temp, i, specific){
 			if(i == entry.length - 1){
 				initialized = true;
 			}
+			var x = $(".day").eq(i);
+			var h = x.height();// - parseInt(x.css("border-top"));
+			$(".cal").eq(i).height(h);
+			$("#container button").eq(i).height(h);
 		} else {
 			generate(i);
 		}
@@ -175,4 +209,15 @@ function genFoods(){
 
 function rand(n){
 	return Math.floor(Math.random()*n);
+}
+
+function reset(){
+	var i = 0
+	Object.keys(foodTypes).forEach(function(key){
+		foodTypes[key].count = counts[i];
+		i++;
+	});
+	for(var i=0; i<entry.length; i++){
+		generate(i);
+	}
 }
