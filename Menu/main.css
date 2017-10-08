@@ -133,6 +133,7 @@ h2{
     -moz-box-shadow: 1px 5px 15px 0px rgba(0,0,0,0.3);
 	box-shadow: 1px 5px 15px 0px rgba(0,0,0,0.3);
 	margin: 0 0;
+	font-size: 14px
 }
 
 .ui-dialog-buttonset button:nth-last-of-type(2){
