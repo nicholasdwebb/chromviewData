@@ -53,7 +53,7 @@ foodTypes["Crockpot"] = {
 		"Chicken and Dumplings",
 		"Slow Cooked Ham",
 		"Chicken Noodle Soup",
-		"Hawaiin Chicken",
+		"Hawaiian Chicken",
 		"Gumbo",
 	],
 	count: 1,
@@ -67,27 +67,25 @@ foodTypes["Miscellaneous"] = {
 		"Order Takeout",
 		"Fried Rice",
 		"Subs",
+		"Chicken Pitas",
+		"Cauliflower Steaks [Stumps made me put this here]",
+		"Sesame Noodles",
 	],
 	count: 2,
 };
 
+var foodTypesBackup = $.extend(true, {}, foodTypes);
+console.log(foodTypesBackup);
 var entry;
 var foods = [];
 var dialogs = [];
 var initialized = false;
-var counts = [];
 
 $(function(){
 
 	if(window.innerWidth < 420){
 		$("#container").width(window.innerWidth * .95);
 	}
-
-	var i = 0
-	Object.keys(foodTypes).forEach(function(key){
-		counts[i] = foodTypes[key].count;
-		i++
-	});
 
 	genFoods();
 
@@ -111,7 +109,13 @@ $(function(){
 				dialogs[t] = {
 					text: foo,
 					click: function() {
-						generate(i, foo);
+						var origCol = $(".day").css("color");
+						$(".day").eq(i).animate({
+							color: "transparent",
+						}, 300).delay(150).animate({
+							color:origCol,
+						}, 500);
+						setTimeout(function(){generate(i, foo)},300);
 						close();
 					}
 				}
@@ -119,7 +123,13 @@ $(function(){
 			dialogs[foods.length] = {
 					text: "Surprise me!",
 					click: function() {
-						generate(i);
+						var origCol = $(".day").css("color");
+						$(".day").eq(i).animate({
+							color: "transparent",
+						}, 300).delay(150).animate({
+							color:origCol,
+						}, 500);
+						setTimeout(function(){generate(i)},300);
 						close();
 					}
 				}
@@ -220,12 +230,17 @@ function rand(n){
 }
 
 function reset(){
-	var i = 0
-	Object.keys(foodTypes).forEach(function(key){
-		foodTypes[key].count = counts[i];
-		i++;
-	});
-	for(var i=0; i<entry.length; i++){
-		generate(i);
-	}
+	foodTypes = $.extend(true, {}, foodTypesBackup);
+	initialized = false;
+	var origCol = $(".day").css("color");
+	$(".day").animate({
+		color: "transparent",
+	}, 500).delay(150).animate({
+		color:origCol,
+	}, 500);
+	setTimeout(function(){
+		for(var i=0; i<entry.length; i++){
+			generate(i);
+		}
+	},500);
 }
