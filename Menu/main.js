@@ -105,16 +105,19 @@ $(function(){
 					opacity: 0,
 				}, 500);
 			}
+			function transition(){
+				var origCol = $(".day").css("color");
+				$(".day").eq(i).animate({
+					color: "transparent",
+				}, 300).delay(150).animate({
+					color:origCol,
+				}, 500);
+			}
 			foods.forEach(function(foo, t){
 				dialogs[t] = {
 					text: foo,
 					click: function() {
-						var origCol = $(".day").css("color");
-						$(".day").eq(i).animate({
-							color: "transparent",
-						}, 300).delay(150).animate({
-							color:origCol,
-						}, 500);
+						transition()
 						setTimeout(function(){generate(i, foo)},300);
 						close();
 					}
@@ -123,12 +126,7 @@ $(function(){
 			dialogs[foods.length] = {
 					text: "Surprise me!",
 					click: function() {
-						var origCol = $(".day").css("color");
-						$(".day").eq(i).animate({
-							color: "transparent",
-						}, 300).delay(150).animate({
-							color:origCol,
-						}, 500);
+						transition()
 						setTimeout(function(){generate(i)},300);
 						close();
 					}

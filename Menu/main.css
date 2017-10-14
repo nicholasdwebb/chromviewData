@@ -1,4 +1,8 @@
-html {
+html{
+	font-family: Helvetica;
+}
+
+#back {
 	height: 100%;
 	background-color:rgb(150,130,140);
 	background: -webkit-linear-gradient(to top, rgb(58, 123, 170), rgb(97, 100, 120));  /* Chrome 10-25, Safari 5.1-6 */
@@ -9,7 +13,9 @@ html {
 	margin: 0;
 	padding: 0;
 	top: 0;
+	left: 0;
 	position: fixed;
+	z-index: -10;
 }
 
 .background{
