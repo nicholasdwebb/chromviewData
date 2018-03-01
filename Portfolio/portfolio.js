@@ -9,6 +9,7 @@ var ref1orig;
 var ref2orig;
 var ref3orig;
 var ref4orig;
+var ref5orig;
 var mAlt = "";
 var resume = getVariable("resume");
 
@@ -29,12 +30,13 @@ $(function(){
 	}
 	waDemo();
 	setInterval(function(){
-		if(iphone.height() !== ipH | window.innerWidth !== ww){
+		if(window.innerWidth !== ww){
 			waDemo();
 			ww = window.innerWidth;
 		} else if ($("#music" + mAlt + " .txt").css("font-size") !== $(".txt").css("font-size") | $("#music" + mAlt + " h2").css("font-size") !== $("h2:first-of-type").css("font-size")){
-			$("#music" + mAlt + " h2").css("font-size",$("h2:first-of-type").css("font-size"))
+			$("#music" + mAlt + " h2").css("font-size",$("h2:first-of-type").css("font-size"));
 			$("#music" + mAlt + " .txt").css("font-size", $(".txt").css("font-size"));	
+			$("#music" + mAlt + " .txt").css("line-height", $(".txt").css("line-height"));	
 		}
 	}, 500);
 	console.log("Hello! Thanks for checking out my website. I am self taught, so some of the code might be a little unorthodox. If you have any suggestions on how I could improve it, I'd welcome the opportunity to hear from someone with more experience.");
@@ -72,6 +74,7 @@ function waDemo(){
 				ref2orig = $("#ref2").html();
 				ref3orig = $("#ref3").html();
 				ref4orig = $("#ref4").html();
+				ref5orig = $("#ref5").html();
 			}
 			$("#musicalt").html(music);
 			$("#ref4").html(ref2orig);
@@ -93,6 +96,7 @@ function waDemo(){
 				$("#ref2").html(ref2orig);
 				$("#ref3").html(ref3orig);
 				$("#ref4").html(ref4orig);
+				$("#ref5").html(ref5orig);
 				$("#musicalt").html("");
 				$("#musicalt").removeClass("back col-sm-12 col-xs-12 txt");
 				$("#music").addClass("back col-lg-12 col-md-12 col-sm-12 col-xs-12 txt");
@@ -111,21 +115,35 @@ function waDemo(){
 	if(lh < 1.1){
 		lh = 1.1;
 	}
+	// setTimeout(function(){
+	// 	var temp = ($("#watext").height() + $("#watext").offset().top - $("#widgetassistant").offset().top)*0.98;
+	// 	if(ipH*0.88 <= $("#watext").height() && $("#widgetassistant").height() !== temp){
+	// 		scaled = temp;
+	// 		$("#widgetassistant").height(scaled);
+	// 		$("#widgetassistant").css("padding-bottom", 0);
+	// 	} else {
+	// 		$("#widgetassistant").css("padding-bottom", "7%");
+	// 	}
+	// 	temp = ($("#watext").height() + $("#iphone").height())*1.13;
+	// 	if(window.innerWidth < 768 && $("#widgetassistant").height() !== temp){
+	// 		$("#below").html("below")
+	// 		$("#widgetassistant").height(temp);
+	// 	} else if (window.innerWidth >= 768) {
+	// 		$("#below").html("to the right")
+	// 	}
+	// },500);
 	setTimeout(function(){
-		var temp = ($("#watext").height() + $("#watext").offset().top - $("#widgetassistant").offset().top)*0.98;
-		if(ipH*0.88 <= $("#watext").height() && $("#widgetassistant").height() !== temp){
-			scaled = temp;
-			$("#widgetassistant").height(scaled);
-			$("#widgetassistant").css("padding-bottom", 0);
-		} else {
-			$("#widgetassistant").css("padding-bottom", "7%");
-		}
-		temp = ($("#watext").height() + $("#iphone").height())*1.13;
-		if(window.innerWidth < 768 && $("#widgetassistant").height() !== temp){
+		var temp = 0;
+		if(window.innerWidth < 768){
 			$("#below").html("below")
+			temp = ($("#widgetassistantdemo img").height() + $("#widgetassistantdemo img").offset().top - $("#widgetassistant").offset().top)*0.98;
 			$("#widgetassistant").height(temp);
+			$("#widgetassistant").css("padding-bottom", "7%");
 		} else if (window.innerWidth >= 768) {
 			$("#below").html("to the right")
+			temp = $("#music").height() + $("#music").offset().top - $("#widgetassistant").offset().top
+			$("#widgetassistant").css("padding-bottom", 0);
+			$("#widgetassistant").height(temp);
 		}
 	},500);
 	$(".txt, .btn-default").css("font-size",fs);
